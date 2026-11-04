@@ -27,7 +27,7 @@ form.addEventListener("submit", async function (event) {
     message.textContent = "";
 
     try {
-        const response = await fetch(/api/admission, {
+        const response = await fetch("/api/admission", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
