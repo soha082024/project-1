@@ -68,7 +68,9 @@ export default async function handler(req, res) {
         });
 
         if (!n8nResponse.ok) {
-            throw new Error("n8n request failed");
+            const errorDetails = await response.text();
+console.error("n8n error details:", response.status, errorDetails);
+throw new Error(`n8n request failed: ${response.status}`);
         }
 
         return res.status(200).json({
