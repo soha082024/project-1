@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-card">
+            <h1>Student Admission</h1>
+            <p class="subtitle">Complete the form to apply for admission.</p>
+
+            <form id="admissionForm">
+
+                <div class="form-group">
+                    <label for="studentName">Student Full Name</label>
+                    <input type="text" id="studentName"
+                        name="studentName" placeholder="Enter full name"
+                        required maxlength="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="guardianName">Father's / Guardian's Name</label>
+                    <input type="text" id="guardianName"
+                        name="guardianName" placeholder="Enter guardian's name"
+                        required maxlength="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="studentEmail">Email Address</label>
+                    <input type="email" id="studentEmail"
+                        name="studentEmail" placeholder="Enter email address"
+                        required maxlength="254">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone"
+                        name="phone" placeholder="Enter phone number"
+                        required maxlength="20">
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course Applying For</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Business Administration">Business Administration</option>
+                        <option value="English Language">English Language</option>
+                    </select>
+                </div>
+
+                <!-- Hidden anti-spam field -->
+                <div class="hidden-field" aria-hidden="true">
+                    <label for="website">Leave this field empty</label>
+                    <input type="text" id="website" name="website"
+                        tabindex="-1" autocomplete="off">
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    Submit Application
+                </button>
+
+                <p id="message" role="status" aria-live="polite"></p>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
